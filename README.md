@@ -26,26 +26,32 @@ El algoritmo de compresión Huffman es un método que asigna códigos de longitu
 
 Este proyecto está implementado en Python y utiliza el framework Kivy para la interfaz de usuario. La arquitectura del proyecto está organizada de la siguiente manera:
 
-- Carpeta 'huffmanCode': Contiene un archivo .py en donde se encuentra el código fuente de la lógica de la aplicación.
-    - huffman.py: Contiene la lógica para codificar y decodificar mensajes utilizando el algoritmo de Huffman.
+- Carpeta 'sql': Contiene los archivos .sql donde se encuentra la instrucción sql para crear las tablas en NeonDB.
+    - crear_historial.sql: Se encuentra la instrucción sql para crear las tabla de historial en NeonDB.
+    - crear_usuarios.sql: Se encuentra la instrucción sql para crear las tabla de usuarios en NeonDB.
 
-- Carpeta 'interfazHuffman': Contiene un archivo .py en donde se encuentra la interfaz de usuario.
-    - interfaz.py: Contiene el código implementado con la biblioteca Kivy para la elaboración de la interfaz gráfica de la aplicación.
- 
-- Carpeta 'consoleHuffman': Contiene un archivo .py en donde se encuentra la interfaz por consola.
-    - console.py: Contiene el código implementado con la lógica Huffmans en la interfaz por consola.
+- Carpeta 'src': Contiene en controller, mmodel y los view tanto por consola como por el gui.
+    - Carpeta 'controller': Contiene los controladores de las tablas de la base de datos.
+    - Carpeta 'model': Contiene la lógica huffman, ademas de la creación de los objetos historial y usuario.
+    - Carpeta 'view-console': Contiene la interfaz por consola conectada a la base de datos.
+    - Carpeta 'view-gui': Contiene la interfaz gráfica.
 
 - Carpeta 'tests': Contiene pruebas unitarias para la lógica de la aplicación.
     - test_huffman.py: Pruebas unitarias para las funciones de codificación y decodificación de Huffman.
+    - testMVC.py: Pruebas unitarias para las funciones de las tablas en la base de datos.
 
 
 ## Uso
 
-Para poder hacer uso debe conectar a su base de datos en NeonDB, incluyendo los datos de conexión en SecretConfig-sample.py y renombrando el archivo como SecretConfig.py
+Para poder hacer uso de la base de datos debe conectarse a su NeonDB, incluyendo los datos de conexión en SecretConfig-sample.py y renombrando el archivo como SecretConfig.py.
+
+Se deben ejecutar primero las pruebas unitarias para que se creen las tablas en la base de datos. 
 
 - Uso del código fuente Huffman por consola: Para hacer uso de la aplicación por consola se debe correr el archivo console.py que se encuentra en la carpeta 'consoleHuffman'.
     - Para ejecutarlo por la terminal se debe especificar la ruta de busqueda donde se encuentran los módulos, además de:
-      python huffmanCode\src\view-console\console.py 
+      python huffmanCode\src\view-console\console.py
+
+    - Recuerde que la base de datos unicamente esta conectada a la interfaz por consola. 
 
 - Uso del Kivy: Para hacer uso de la aplicación con interfaz gráfica se debe correr el archivo interfaz.py que se encuentra en la carpeta 'interfazHuffman'.
     - Para ejecutarlo por la terminal se debe especificar la ruta de busqueda donde se encuentran los módulos, además de:
