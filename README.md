@@ -55,5 +55,10 @@ Se deben ejecutar primero las pruebas unitarias para que se creen las tablas en 
 
 - Uso del Kivy: Para hacer uso de la aplicación con interfaz gráfica se debe correr el archivo interfaz.py que se encuentra en la carpeta 'interfazHuffman'.
     - Para ejecutarlo por la terminal se debe especificar la ruta de busqueda donde se encuentran los módulos, además de:
-      python huffmanCode\src\view-gui\huffman_gui.py 
+      python huffmanCode\src\view-gui\huffman_gui.py
+
+- Uso de las pruebas unitarias: Para hacer uso de las pruebas unitarias de la base de datos debe correr el archivo TestMVC.py que se encuentra en la carpeta 'tests'.
+    - Para ejecutarlo por la terminar debe especificar la ruta de busqueda donde se encuentran los módulos, ademas de :
+      python huffmanCode\tests\TestMVC.py
+      
   
