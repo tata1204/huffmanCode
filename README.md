@@ -17,7 +17,7 @@ Este proyecto es una aplicación de codificación y decodificación utilizando e
 El algoritmo de compresión Huffman es un método que asigna códigos de longitud variable a cada carácter en un mensaje, basándose en su frecuencia de aparición. Los caracteres más comunes reciben códigos más cortos, mientras que los menos comunes reciben códigos más largos. Esto resulta en una representación más eficiente del mensaje, ya que se utilizan menos bits para los caracteres más frecuentes.
 
 
-## Prerrequisitos
+## Pre-requisitos
 
 - Python 3.x instalado en tu sistema. 
 - La biblioteca Kivy, esta se puede instalar ejecutando pip install kivy.
