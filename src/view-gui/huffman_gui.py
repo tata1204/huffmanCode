@@ -46,7 +46,7 @@ class LoginScreen(Screen):
     def login(self, instance):
         # Verifica las credenciales ingresadas y permite el acceso o muestra un mensaje de error
         # Aquí puedes agregar tu lógica de autenticación
-        if self.username_input.text == "usuario" and self.password_input.text == "contraseña":
+        if self.username_input.text == "" and self.password_input.text == "":
             self.manager.current = 'main'
         else:
             popup = Popup(title='Error', content=Label(text='Credenciales incorrectas'), size_hint=(None, None), size=(200, 200))
